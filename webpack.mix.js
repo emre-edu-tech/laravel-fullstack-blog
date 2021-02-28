@@ -1,5 +1,9 @@
 const mix = require('laravel-mix');
 
+// Integrate Vuetify Loader and Case sensitive paths plugin
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -14,4 +18,10 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps()
-    .webpackConfig({devtool: 'source-map'});
+    .webpackConfig({
+        devtool: 'source-map',
+        plugins: [
+            new VuetifyLoaderPlugin(),
+            new CaseSensitivePathsPlugin(),
+        ]
+    });

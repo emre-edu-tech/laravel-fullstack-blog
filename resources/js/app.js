@@ -14,6 +14,9 @@ import VueRouter from './router';
 // Core UI import
 import { Sidebar, Alert, Popover } from '@coreui/coreui';
 
+// Vuetify
+import Vuetify from './plugins/vuetify';
+
 // Main Vue Components
 Vue.component('index-component', require('./components/IndexComponent.vue').default);
 Vue.component('sidebar-component', require('./components/SidebarComponent.vue').default);
@@ -27,4 +30,5 @@ Vue.component('sidebar-component', require('./components/SidebarComponent.vue').
 const app = new Vue({
     el: '#app',
     router: VueRouter,
+    vuetify: Vuetify,
 });
