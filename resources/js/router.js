@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-// import components pages
+// import component pages
 import firstPage from './components/pages/MyFirstVuePage';
 import secondPage from './components/pages/MySecondVuePage';
 
@@ -19,10 +19,6 @@ const routes = [
     },
     {
         path: '/tags',
-        component: tags,
-    },
-    {
-        path: '/categories',
         component: tags,
     },
     // Test Routes
