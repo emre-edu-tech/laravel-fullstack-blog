@@ -16,7 +16,9 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/frontend.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/frontend.scss', 'public/css')
     .sourceMaps()
     .webpackConfig({
         devtool: 'source-map',
